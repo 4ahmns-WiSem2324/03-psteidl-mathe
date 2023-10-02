@@ -7,7 +7,7 @@ public class SceneSelector : MonoBehaviour
 {
     public void Scene1()
     {
-        SceneManager.LoadScene("CheckIsPrime");
+        SceneManager.LoadScene("PrimeNumbers");
     }
 
     public void Scene2()
