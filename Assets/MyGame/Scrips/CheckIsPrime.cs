@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,14 +14,7 @@ public class CheckIsPrime : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (input == null)
-        {
-            Debug.LogError("Input Field not assigned!");
-            return;
-        }
 
-        // Attach the listener to the Input Field's OnEndEdit event.
-        input.onSubmit.AddListener(ValidateInput);
     }
 
     // Update is called once per frame
@@ -31,21 +23,7 @@ public class CheckIsPrime : MonoBehaviour
 
     }
 
-    private void ValidateInput(string userInput)
-    {
-        int parsedInt;
-        try
-        {
-            parsedInt = int.Parse(userInput);
-            weitergeben();
-        }
-        catch (FormatException)
-        {
-            Debug.LogWarning("Input is not an integer!");
-        }
-    }
-
-        public void weitergeben()
+    public void weitergeben()
     {
         int.TryParse(input.text, out int result);
 

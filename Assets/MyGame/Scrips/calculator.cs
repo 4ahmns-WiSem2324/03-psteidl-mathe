@@ -76,7 +76,7 @@ public class calculator : MonoBehaviour
 
         if (calcmethod == 3) ergebnis = var1 * var2;
 
-        if (calcmethod == 4) ergebnis = var1 / var2;
+        if (calcmethod == 4) ergebnis = var1 % var2;
 
         input.text = ergebnis.ToString();
     }
